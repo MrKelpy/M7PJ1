@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EEA93CD-F231-47C1-BC22-542A62DC2B39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>M7PJ1</RootNamespace>
+    <AssemblyName>M7PJ1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gui\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ItemSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ItemSelection.Designer.cs">
+      <DependentUpon>ItemSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\NamePriceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\NamePriceDialog.Designer.cs">
+      <DependentUpon>NamePriceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\FileUtils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils\FileUtils.Designer.cs">
+      <DependentUpon>FileUtils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\ListingStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils\ListingStruct.Designer.cs">
+      <DependentUpon>ListingStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\OrderStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils\OrderStruct.Designer.cs">
+      <DependentUpon>OrderStruct.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="gui\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ItemSelection.resx">
+      <DependentUpon>ItemSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\NamePriceDialog.resx">
+      <DependentUpon>NamePriceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\aefc.png" />
+    <Content Include="Resources\aefcfoodtray.png" />
+    <Content Include="Resources\selectionbg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

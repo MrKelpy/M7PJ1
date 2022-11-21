@@ -1,0 +1,14 @@
+C:\dev\C#\M6PJ2\bin\Debug\M6PJ2.exe.config
+C:\dev\C#\M6PJ2\bin\Debug\M6PJ2.exe
+C:\dev\C#\M6PJ2\bin\Debug\M6PJ2.pdb
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.csprojAssemblyReference.cache
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.Properties.Resources.resources
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.csproj.GenerateResource.cache
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.csproj.CoreCompileInputs.cache
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.exe
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.pdb
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.gui.Main.resources
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.gui.Home.resources
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.gui.History.resources
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.gui.ItemSelection.resources
+C:\dev\C#\M6PJ2\obj\Debug\M6PJ2.gui.NamePriceDialog.resources

@@ -1,0 +1,14 @@
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.csprojAssemblyReference.cache
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.gui.History.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.gui.Home.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.gui.ItemSelection.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.gui.NamePriceDialog.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.Properties.Resources.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.csproj.GenerateResource.cache
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.csproj.CoreCompileInputs.cache
+C:\dev\C#\M7PJ1\bin\Debug\M7PJ1.exe.config
+C:\dev\C#\M7PJ1\bin\Debug\M7PJ1.exe
+C:\dev\C#\M7PJ1\bin\Debug\M7PJ1.pdb
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.gui.Main.resources
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.exe
+C:\dev\C#\M7PJ1\obj\Debug\M7PJ1.pdb

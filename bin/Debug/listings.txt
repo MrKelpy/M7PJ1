@@ -1,0 +1,31 @@
+Pão com Queijo,0.30
+Pão com Fiambre,0.40
+Pão com Manteiga,0.20
+Maçã,0.10
+Pera,0.10
+Sumo de Laranja,0.30
+Sumo de Pera,0.30
+Sumo de Frutas,0.30
+Sumo de Frutos Vermelhos,0.30
+Salame,0.80
+Malteisers,0.70
+Hamburguer,1.50
+Tobleronne,1.00
+Sushi,1.30
+Panado de Frango,1.40
+Garrafa de Água 150ml,0.20
+Garrafa de Água 1L,1.00
+Pepsi,0.80
+Coca-Cola,1.20
+Pizza,2.30
+Folha Teste Quad.,0.10
+Folha Teste Linhas,0.10
+Mil Folhas,0.70
+Merenda,0.90
+Gelado de Chocolate,0.50
+Gelado de Morango,0.50
+Gelado de Baunilha,0.50
+Gelado de Banana,0.50
+Gelado de Chocolate (c/Pepitas),0.65
+Banana,0.15
+Folhado Misto,0.3
