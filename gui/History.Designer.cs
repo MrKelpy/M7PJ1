@@ -58,6 +58,8 @@ namespace M7PJ1.gui
             // 
             this.dataHistory.AllowUserToAddRows = false;
             this.dataHistory.AllowUserToDeleteRows = false;
+            this.dataHistory.AllowUserToResizeColumns = false;
+            this.dataHistory.AllowUserToResizeRows = false;
             this.dataHistory.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

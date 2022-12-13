@@ -35,7 +35,7 @@ namespace M7PJ1.gui
         /// </summary>
         public NamePriceDialog WithPrice()
         {
-            this.priceLayout .Visible = true;
+            this.priceLayout.Visible = true;
             return this; // Return the NamePriceDialog for chaining.
         }
 

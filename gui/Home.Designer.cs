@@ -94,6 +94,7 @@ namespace M7PJ1.gui
             this.BackgroundImage = global::M7PJ1.Properties.Resources.selectionbg;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.content);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Home";
             this.Text = "Home";
             this.content.ResumeLayout(false);

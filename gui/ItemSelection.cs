@@ -12,10 +12,10 @@ namespace M7PJ1.gui
     /// </summary>
     public partial class ItemSelection : Form
     {
-        private string _historyPath;
-        private string _listingsPath;
         public readonly List<ListingStruct.Listing> Listings;
         public readonly List<OrderStruct.Order> Orders = new List<OrderStruct.Order>();
+        private readonly string _historyPath;
+        private readonly string _listingsPath;
         private readonly List<Button> _gridButtons;
         private readonly DataGridView _history;
         private int _page;
@@ -44,8 +44,10 @@ namespace M7PJ1.gui
         /// </summary>
         private void UpdateButtons(int startingIndex)
         {
+            // Resets the button states to the inactive button states.
             this._gridButtons.ForEach(x => x.Text = "");
             this._gridButtons.ForEach(x => x.BackColor = Color.LightGray);
+            this._gridButtons.ForEach(x => x.FlatAppearance.MouseOverBackColor = Color.LightGray);
 
             // Filters out the listings to go into the buttons accordingly to the words in the search box
             List<ListingStruct.Listing> filteredListings =
@@ -67,7 +69,7 @@ namespace M7PJ1.gui
                 button.BackColor = button.FlatAppearance.MouseOverBackColor =
                     this.Orders.Any(x => x.Product == button.Text) ? Color.LightGreen : button.BackColor;
             }
-            
+
             lblQuantity.Text = @"Quantidade: ";
             lblSelected.Text = @"Selecionado: ";
             lblPrice.Text = @"Preço: ";
@@ -123,6 +125,9 @@ namespace M7PJ1.gui
             
             // Only enable the next page button if the first index of the next page exists in the listings.
             btnNext.Enabled = this._page * this._gridButtons.Count < this.Listings.Count;
+            
+            // Sets the checkout state accordingly to whether there are any selected items.
+            this.btnCheckout.Enabled = this.Orders.Count > 0;
         }
 
         /// <summary>
@@ -169,7 +174,7 @@ namespace M7PJ1.gui
             foreach (var x in FileUtils.ReadFromFile(this._listingsPath))
             {
                 string[] rawListing = x.Split(',');
-                if (rawListing.Length == 0) continue;
+                if (rawListing.Length != 2) continue;  // If the line format is invalid, skip it.
                 builder.Add(new ListingStruct.Listing(rawListing[0], double.Parse(rawListing[1])));
             }
 
@@ -217,7 +222,7 @@ namespace M7PJ1.gui
             }
 
             // Clears everything and gets ready for more orders.
-            this.Orders.Clear();    
+            this.Orders.Clear();
             this.UpdateButtons(0);
             txtStudent.Clear();
         }
@@ -282,7 +287,7 @@ namespace M7PJ1.gui
         }
 
         /// <summary>
-        /// Replaces a given order's index by name.
+        /// Replaces a given order by name.
         /// </summary>
         /// <param name="name">The name of product order to replace</param>
         /// <param name="replacement">The Order object to replace it with.</param>

@@ -9,8 +9,8 @@ namespace M7PJ1.utils
         /// </summary>
         public struct Listing
         {
-            public string Name;
-            public double Price;
+            public readonly string Name;
+            public readonly double Price;
 
             public Listing(string name, double price)
             {

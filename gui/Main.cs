@@ -17,8 +17,8 @@ namespace M7PJ1.gui
         private readonly ItemSelection _itemSelection;
         private readonly Panel _historyContent;
         private Control _layoutOriginalParent;
-        private const string HistoryPath = "./history.txt";
-        private const string ListingsPath = "./listings.txt";
+        private const string HistoryPath = "./history.csv";
+        private const string ListingsPath = "./listings.csv";
 
         public Main()
         {
@@ -83,6 +83,7 @@ namespace M7PJ1.gui
                 return;
             }
             
+            // Adds the listing to a sorted list, and to the file, then force to user to go to the first page.
             this._itemSelection.Listings.Add(new ListingStruct.Listing(dialog.Name, dialog.Price));
             this._itemSelection.Listings.Sort((a, b) => String.Compare(a.Name, b.Name, StringComparison.CurrentCulture));
             FileUtils.AppendToFile(ListingsPath, dialog.Name + ',' + dialog.Price);
@@ -111,6 +112,7 @@ namespace M7PJ1.gui
             // Remove the listings from both internal lists
             this._itemSelection.Listings.RemoveAll(x => x.Name.Equals(dialog.Name));
             this._itemSelection.Orders.RemoveAll(x => x.Product.Equals(dialog.Name));
+            if (this._itemSelection.Orders.Count == 0) this._itemSelection.btnCheckout.Enabled = false;
             
             // Remove the listings from memory
             List<string> data = FileUtils.ReadFromFile(ListingsPath);
@@ -148,12 +150,25 @@ namespace M7PJ1.gui
             data.RemoveAll(x => x.Split(',')[0].ToLower().Equals(dialog.Name.ToLower()));
             data.Add($"{dialog.Name},{dialog.Price}");
             FileUtils.DumpToFile(ListingsPath, data);
-            
+
+            this._itemSelection.FirstPage();
+        }
+        
+        /// <summary>
+        /// Clears all the currently selected orders, effectively cancelling the current order.
+        /// </summary>
+        /// <param name="sender">The event sender</param>
+        /// <param name="e">The event arguments</param>
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this._itemSelection.Orders.Clear();
             this._itemSelection.FirstPage();
         }
         
         private void btnHome_Click(object sender, EventArgs e) => this.ProcessLayoutSelection(btnHome, _homeContent);
         private void btnOrders_Click(object sender, EventArgs e) => this.ProcessLayoutSelection(btnOrders, _itemSelection.GetContent());
         private void btnHistory_Click(object sender, EventArgs e) => this.ProcessLayoutSelection(btnHistory, _historyContent);
+        
+
     }
 }

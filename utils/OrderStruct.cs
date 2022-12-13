@@ -10,7 +10,7 @@ namespace M7PJ1.utils
         /// </summary>
         public struct Order
         {
-            public string Product;
+            public readonly string Product;
             public int Quantity;
 
             public Order(string product, int quantity)

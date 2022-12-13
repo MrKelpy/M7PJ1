@@ -33,6 +33,8 @@ namespace M7PJ1.gui
         {
             this.content = new System.Windows.Forms.Panel();
             this.dialsLayout = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.lblErrorStudent = new System.Windows.Forms.Label();
             this.productLayout = new System.Windows.Forms.Panel();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@ namespace M7PJ1.gui
             this.btnM = new System.Windows.Forms.Button();
             this.btnG = new System.Windows.Forms.Button();
             this.btnA = new System.Windows.Forms.Button();
-            this.textSearch = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.content.SuspendLayout();
             this.dialsLayout.SuspendLayout();
             this.productLayout.SuspendLayout();
@@ -132,6 +132,23 @@ namespace M7PJ1.gui
             this.dialsLayout.Name = "dialsLayout";
             this.dialsLayout.Size = new System.Drawing.Size(212, 390);
             this.dialsLayout.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 19);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Procurar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textSearch
+            // 
+            this.textSearch.Location = new System.Drawing.Point(63, 16);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(137, 21);
+            this.textSearch.TabIndex = 40;
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
             // lblErrorStudent
             // 
@@ -636,23 +653,6 @@ namespace M7PJ1.gui
             this.btnA.TabIndex = 0;
             this.btnA.UseVisualStyleBackColor = false;
             // 
-            // textSearch
-            // 
-            this.textSearch.Location = new System.Drawing.Point(63, 16);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(137, 21);
-            this.textSearch.TabIndex = 40;
-            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(0, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 19);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Procurar";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ItemSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,7 +696,7 @@ namespace M7PJ1.gui
 
         private System.Windows.Forms.Panel dialsLayout;
 
-        private System.Windows.Forms.Button btnCheckout;
+        public System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblQuantity;

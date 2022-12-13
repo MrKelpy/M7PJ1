@@ -33,6 +33,7 @@ namespace M7PJ1.gui
         {
             this.layout = new System.Windows.Forms.Panel();
             this.menuLayout = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnNewListing = new System.Windows.Forms.Button();
             this.btnDeleteListing = new System.Windows.Forms.Button();
             this.btnEditListing = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@ namespace M7PJ1.gui
             // 
             // menuLayout
             // 
+            this.menuLayout.Controls.Add(this.btnClear);
             this.menuLayout.Controls.Add(this.btnNewListing);
             this.menuLayout.Controls.Add(this.btnDeleteListing);
             this.menuLayout.Controls.Add(this.btnEditListing);
@@ -67,6 +69,23 @@ namespace M7PJ1.gui
             this.menuLayout.Size = new System.Drawing.Size(797, 59);
             this.menuLayout.TabIndex = 1;
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnClear.Location = new System.Drawing.Point(380, 11);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(97, 40);
+            this.btnClear.TabIndex = 6;
+            this.btnClear.Text = "Cancelar Compra";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnNewListing
             // 
             this.btnNewListing.BackColor = System.Drawing.Color.Transparent;
@@ -76,7 +95,7 @@ namespace M7PJ1.gui
             this.btnNewListing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnNewListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewListing.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNewListing.Location = new System.Drawing.Point(460, 11);
+            this.btnNewListing.Location = new System.Drawing.Point(483, 11);
             this.btnNewListing.Name = "btnNewListing";
             this.btnNewListing.Size = new System.Drawing.Size(97, 40);
             this.btnNewListing.TabIndex = 5;
@@ -93,7 +112,7 @@ namespace M7PJ1.gui
             this.btnDeleteListing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDeleteListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteListing.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteListing.Location = new System.Drawing.Point(575, 11);
+            this.btnDeleteListing.Location = new System.Drawing.Point(586, 11);
             this.btnDeleteListing.Name = "btnDeleteListing";
             this.btnDeleteListing.Size = new System.Drawing.Size(97, 40);
             this.btnDeleteListing.TabIndex = 4;
@@ -110,7 +129,7 @@ namespace M7PJ1.gui
             this.btnEditListing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditListing.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEditListing.Location = new System.Drawing.Point(688, 11);
+            this.btnEditListing.Location = new System.Drawing.Point(689, 11);
             this.btnEditListing.Name = "btnEditListing";
             this.btnEditListing.Size = new System.Drawing.Size(97, 40);
             this.btnEditListing.TabIndex = 3;
@@ -127,7 +146,7 @@ namespace M7PJ1.gui
             this.btnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistory.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHistory.Location = new System.Drawing.Point(249, 11);
+            this.btnHistory.Location = new System.Drawing.Point(218, 11);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(97, 40);
             this.btnHistory.TabIndex = 2;
@@ -144,7 +163,7 @@ namespace M7PJ1.gui
             this.btnOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrders.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnOrders.Location = new System.Drawing.Point(131, 11);
+            this.btnOrders.Location = new System.Drawing.Point(115, 11);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(97, 40);
             this.btnOrders.TabIndex = 1;
@@ -175,7 +194,7 @@ namespace M7PJ1.gui
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layout);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Main";
             this.Text = "AEFC Food Tray";
@@ -183,6 +202,8 @@ namespace M7PJ1.gui
             this.menuLayout.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnClear;
 
         private System.Windows.Forms.Button btnDeleteListing;
         private System.Windows.Forms.Button btnNewListing;

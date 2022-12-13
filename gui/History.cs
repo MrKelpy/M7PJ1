@@ -15,6 +15,8 @@ namespace M7PJ1.gui
         public History(string historyPath)
         {
             InitializeComponent();
+            
+            // ReSharper disable once CoVariantArrayConversion
             FileUtils.ReadFromFile(historyPath).ForEach(x => dataHistory.Rows.Add(x.Split(',')));
         }
 
